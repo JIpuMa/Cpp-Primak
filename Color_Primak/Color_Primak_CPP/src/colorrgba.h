@@ -5,37 +5,37 @@
 
 #include "color.h"
 
-/*Клас для роботи з системою HSB, наслідник класу Color*/
+/*РљР»Р°СЃ РґР»СЏ СЂРѕР±РѕС‚Рё Р· СЃРёСЃС‚РµРјРѕСЋ HSB, РЅР°СЃР»С–РґРЅРёРє РєР»Р°СЃСѓ Color*/
 class ColorRGBA : public Color
 {
-    typedef unsigned short TUS;  //Створення власного типу в класі
-    TUS red;    //Значення кольору red
-    TUS green;  //Значення кольору green
-    TUS blue;   //Значення кольору blue
-    TUS alpha;  //Значення параметру alpha
+    typedef unsigned short TUS;  //РЎС‚РІРѕСЂРµРЅРЅСЏ РІР»Р°СЃРЅРѕРіРѕ С‚РёРїСѓ РІ РєР»Р°СЃС–
+    TUS red;    //Р—РЅР°С‡РµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ red
+    TUS green;  //Р—РЅР°С‡РµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ green
+    TUS blue;   //Р—РЅР°С‡РµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ blue
+    TUS alpha;  //Р—РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ alpha
 public:
-    ColorRGBA(TUS r, TUS g, TUS b, TUS a = 255);  //Конструктор класу ColorRGBA
-    ColorRGBA(int val = 0);  //Переведення кольору з цілого числа
-    TUS Red() const;         //Отримання значення кольору red
-    void setRed(TUS r);      //Встановлення значення кольору red
-    TUS Green() const;       //Отримання значення кольору green
-    void setGreen(TUS g);    //Встановлення значення кольору green
-    TUS Blue() const;        //Отримання значення кольору blue
-    void setBlue(TUS b);     //Встановлення значення кольору blue
-    TUS Alpha() const;       //Отримання значення параметру alpha
-    void setAlpha(TUS a);    //Встановлення значення параметру alpha
-    ColorRGBA toRGBA();      //Петерворення кольору з сиситеми HSB в RGBA
-    ColorCMYK toCMYK();      //Петерворення кольору з сиситеми HSB в CMYK
-    ColorHSB toHSB();        //Петерворення кольору з сиситеми HSB в HSB
-    operator int();          //Перетворення кольору в ціле число
-    operator float();        //Перетворення кольору в дійсне число
-    void printColor();       //Вивід кольору
-    void printColorInt();    //Вивід кольору у вигляді цілого числа
-    void printColorFloat();  //Вивід кольору у вигляді дійсного числа
-    friend ColorRGBA operator+(ColorRGBA& clr1, ColorRGBA& clr2);   //Перевизначення оператора побітового додавання кольорів в системі RGBA
-    friend ColorRGBA operator&(ColorRGBA& clr1, ColorRGBA& clr2);   //Перевизначення оператора побітового перетину кольорів в системі RGBA
-    friend ColorRGBA operator|(ColorRGBA& clr1, ColorRGBA& clr2);   //Перевизначення оператора побітового об'єднання кольорів в системі RGBA
-    friend ColorRGBA operator^(ColorRGBA& clr1, ColorRGBA& clr2);   //Перевизначення оператора побітового XOR кольорів в системі RGBA
+    ColorRGBA(TUS r, TUS g, TUS b, TUS a = 255);  //РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСѓ ColorRGBA
+    ColorRGBA(int val = 0);  //РџРµСЂРµРІРµРґРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ Р· С†С–Р»РѕРіРѕ С‡РёСЃР»Р°
+    TUS Red() const;         //РћС‚СЂРёРјР°РЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ red
+    void setRed(TUS r);      //Р’СЃС‚Р°РЅРѕРІР»РµРЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ red
+    TUS Green() const;       //РћС‚СЂРёРјР°РЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ green
+    void setGreen(TUS g);    //Р’СЃС‚Р°РЅРѕРІР»РµРЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ green
+    TUS Blue() const;        //РћС‚СЂРёРјР°РЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ blue
+    void setBlue(TUS b);     //Р’СЃС‚Р°РЅРѕРІР»РµРЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ blue
+    TUS Alpha() const;       //РћС‚СЂРёРјР°РЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ alpha
+    void setAlpha(TUS a);    //Р’СЃС‚Р°РЅРѕРІР»РµРЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ alpha
+    ColorRGBA toRGBA();      //РџРµС‚РµСЂРІРѕСЂРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ Р· СЃРёСЃРёС‚РµРјРё HSB РІ RGBA
+    ColorCMYK toCMYK();      //РџРµС‚РµСЂРІРѕСЂРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ Р· СЃРёСЃРёС‚РµРјРё HSB РІ CMYK
+    ColorHSB toHSB();        //РџРµС‚РµСЂРІРѕСЂРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ Р· СЃРёСЃРёС‚РµРјРё HSB РІ HSB
+    operator int();          //РџРµСЂРµС‚РІРѕСЂРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ РІ С†С–Р»Рµ С‡РёСЃР»Рѕ
+    operator float();        //РџРµСЂРµС‚РІРѕСЂРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ РІ РґС–Р№СЃРЅРµ С‡РёСЃР»Рѕ
+    void printColor();       //Р’РёРІС–Рґ РєРѕР»СЊРѕСЂСѓ
+    void printColorInt();    //Р’РёРІС–Рґ РєРѕР»СЊРѕСЂСѓ Сѓ РІРёРіР»СЏРґС– С†С–Р»РѕРіРѕ С‡РёСЃР»Р°
+    void printColorFloat();  //Р’РёРІС–Рґ РєРѕР»СЊРѕСЂСѓ Сѓ РІРёРіР»СЏРґС– РґС–Р№СЃРЅРѕРіРѕ С‡РёСЃР»Р°
+    friend ColorRGBA operator+(ColorRGBA& clr1, ColorRGBA& clr2);   //РџРµСЂРµРІРёР·РЅР°С‡РµРЅРЅСЏ РѕРїРµСЂР°С‚РѕСЂР° РїРѕР±С–С‚РѕРІРѕРіРѕ РґРѕРґР°РІР°РЅРЅСЏ РєРѕР»СЊРѕСЂС–РІ РІ СЃРёСЃС‚РµРјС– RGBA
+    friend ColorRGBA operator&(ColorRGBA& clr1, ColorRGBA& clr2);   //РџРµСЂРµРІРёР·РЅР°С‡РµРЅРЅСЏ РѕРїРµСЂР°С‚РѕСЂР° РїРѕР±С–С‚РѕРІРѕРіРѕ РїРµСЂРµС‚РёРЅСѓ РєРѕР»СЊРѕСЂС–РІ РІ СЃРёСЃС‚РµРјС– RGBA
+    friend ColorRGBA operator|(ColorRGBA& clr1, ColorRGBA& clr2);   //РџРµСЂРµРІРёР·РЅР°С‡РµРЅРЅСЏ РѕРїРµСЂР°С‚РѕСЂР° РїРѕР±С–С‚РѕРІРѕРіРѕ РѕР±'С”РґРЅР°РЅРЅСЏ РєРѕР»СЊРѕСЂС–РІ РІ СЃРёСЃС‚РµРјС– RGBA
+    friend ColorRGBA operator^(ColorRGBA& clr1, ColorRGBA& clr2);   //РџРµСЂРµРІРёР·РЅР°С‡РµРЅРЅСЏ РѕРїРµСЂР°С‚РѕСЂР° РїРѕР±С–С‚РѕРІРѕРіРѕ XOR РєРѕР»СЊРѕСЂС–РІ РІ СЃРёСЃС‚РµРјС– RGBA
 };
 
 #endif // COLORRGBA_H_INCLUDED
