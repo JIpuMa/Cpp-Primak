@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Color_Primak_CPP" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/Color_Primak_CPP" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="main.cpp" />
+		<Unit filename="src/color.h" />
+		<Unit filename="src/colorcmyk.cpp" />
+		<Unit filename="src/colorcmyk.h" />
+		<Unit filename="src/colorhsb.cpp" />
+		<Unit filename="src/colorhsb.h" />
+		<Unit filename="src/colorrgba.cpp" />
+		<Unit filename="src/colorrgba.h" />
+		<Unit filename="src/image.cpp" />
+		<Unit filename="src/image.h" />
+		<Unit filename="src/loader.cpp" />
+		<Unit filename="src/loader.h" />
+		<Unit filename="src/saver.cpp" />
+		<Unit filename="src/saver.h" />
+		<Unit filename="src/utility.cpp" />
+		<Unit filename="src/utility.h" />
+		<Unit filename="tests/test.cpp" />
+		<Unit filename="tests/test.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
