@@ -3,10 +3,10 @@
 
 #include <cmath>
 
-float f_max(float x, float y, float z);    //Знаходження максимального з 3 чисел
+float f_max(float x, float y, float z);    //Р—РЅР°С…РѕРґР¶РµРЅРЅСЏ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ Р· 3 С‡РёСЃРµР»
 
-float f_min(float x, float y, float z);    //Знаходження мінімального з 3 чисел
+float f_min(float x, float y, float z);    //Р—РЅР°С…РѕРґР¶РµРЅРЅСЏ РјС–РЅС–РјР°Р»СЊРЅРѕРіРѕ Р· 3 С‡РёСЃРµР»
 
-bool f_eq(float x, float y);               //Перевірка рівності чисел
+bool f_eq(float x, float y);               //РџРµСЂРµРІС–СЂРєР° СЂС–РІРЅРѕСЃС‚С– С‡РёСЃРµР»
 
 #endif // UTILITY_H_INCLUDED
