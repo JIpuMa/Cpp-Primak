@@ -6,22 +6,23 @@
 
 using namespace std;
 
-/*Класи Image та Mask мають подібну структуру*/
+/*РљР»Р°СЃРё Image С‚Р° Mask РјР°СЋС‚СЊ РїРѕРґС–Р±РЅСѓ СЃС‚СЂСѓРєС‚СѓСЂСѓ*/
 class Image
 {
-    unsigned _m;                 //Значення параметру m
-    unsigned _n;                 //Значення параметру n
-    vector<vector<int>> _data;   //Матриця розмірності m*n цілих чисел
+    unsigned _m;                 //Р—РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ m
+    unsigned _n;                 //Р—РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ n
+    vector<vector<int>> _data;   //РњР°С‚СЂРёС†СЏ СЂРѕР·РјС–СЂРЅРѕСЃС‚С– m*n С†С–Р»РёС… С‡РёСЃРµР»
 public:
-    Image(unsigned m, unsigned n);                     //Конструктор класу Image
-    int getPixel(unsigned i, unsigned j) const;        //Отримання значення пікселя
-    void setPixel(int clr, unsigned i, unsigned j);    //Встановлення значення пікселя
-    unsigned getM() const;                             //Отримання значення параметру
-    unsigned getN() const;                             //Отримання значення параметру
-    void applyFilter(const Image &mask);               //Накладання фільтра Mask на Image
-    void show() const;                                 //Вивід матриці
-    void save(const string& filename) const;           //Збереження в файл
-    static Image load(const string& filename);         //Отримання матриці з файлу
+    Image(unsigned m, unsigned n);                     //РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСѓ Image
+    int getPixel(unsigned i, unsigned j) const;        //РћС‚СЂРёРјР°РЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РїС–РєСЃРµР»СЏ
+    void setPixel(int clr, unsigned i, unsigned j);    //Р’СЃС‚Р°РЅРѕРІР»РµРЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РїС–РєСЃРµР»СЏ
+    unsigned getM() const;                             //РћС‚СЂРёРјР°РЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ
+    unsigned getN() const;                             //РћС‚СЂРёРјР°РЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ
+    void applyFilter(const Image &mask);               //РќР°РєР»Р°РґР°РЅРЅСЏ С„С–Р»СЊС‚СЂР° Mask РЅР° Image
+    void show() const;                                 //Р’РёРІС–Рґ РјР°С‚СЂРёС†С–
+    void save(const string& filename) const;           //Р—Р±РµСЂРµР¶РµРЅРЅСЏ РІ С„Р°Р№Р»
+    static Image load(const string& filename);         //РћС‚СЂРёРјР°РЅРЅСЏ РјР°С‚СЂРёС†С– Р· С„Р°Р№Р»Сѓ
 };
 
 #endif // IMAGE_H_INCLUDED
+
