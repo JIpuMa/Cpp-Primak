@@ -19,8 +19,6 @@ void runTests()
 
     cout << "\nTest apply filter:\n" << endl;
     testImageMask();
-
-    cout << "\nPushka\n" << endl;
 }
 
 void testRGBA()
