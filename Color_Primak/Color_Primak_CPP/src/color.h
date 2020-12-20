@@ -8,15 +8,15 @@ class ColorHSB;
 class Color
 {
 public:
-    virtual ColorRGBA toRGBA() = 0;  //Петерворення кольору з сиситеми RGBA в RGBA
-    virtual ColorCMYK toCMYK() = 0;  //Петерворення кольору з сиситеми CMYK в CMYK
-    virtual ColorHSB toHSB() = 0;    //Петерворення кольору з сиситеми HSB в HSB
-    virtual operator int() = 0;      //Перетворення кольору в ціле число
-    virtual operator float() = 0;    //Перетворення кольору в дійсне число
-    virtual ~Color(){}               //Деструктор класу Color
-    virtual void printColor();       //Вивід кольору
-    virtual void printColorInt();    //Вивід кольору у вигляді цілого числа
-    virtual void printColorFloat();  //Вивід кольору у вигляді дійсного числа
+    virtual ColorRGBA toRGBA() = 0;  //РџРµС‚РµСЂРІРѕСЂРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ Р· СЃРёСЃРёС‚РµРјРё RGBA РІ RGBA
+    virtual ColorCMYK toCMYK() = 0;  //РџРµС‚РµСЂРІРѕСЂРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ Р· СЃРёСЃРёС‚РµРјРё CMYK РІ CMYK
+    virtual ColorHSB toHSB() = 0;    //РџРµС‚РµСЂРІРѕСЂРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ Р· СЃРёСЃРёС‚РµРјРё HSB РІ HSB
+    virtual operator int() = 0;      //РџРµСЂРµС‚РІРѕСЂРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ РІ С†С–Р»Рµ С‡РёСЃР»Рѕ
+    virtual operator float() = 0;    //РџРµСЂРµС‚РІРѕСЂРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ РІ РґС–Р№СЃРЅРµ С‡РёСЃР»Рѕ
+    virtual ~Color(){}               //Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСѓ Color
+    virtual void printColor();       //Р’РёРІС–Рґ РєРѕР»СЊРѕСЂСѓ
+    virtual void printColorInt();    //Р’РёРІС–Рґ РєРѕР»СЊРѕСЂСѓ Сѓ РІРёРіР»СЏРґС– С†С–Р»РѕРіРѕ С‡РёСЃР»Р°
+    virtual void printColorFloat();  //Р’РёРІС–Рґ РєРѕР»СЊРѕСЂСѓ Сѓ РІРёРіР»СЏРґС– РґС–Р№СЃРЅРѕРіРѕ С‡РёСЃР»Р°
 };
 
 #endif // COLOR_H_INCLUDED
