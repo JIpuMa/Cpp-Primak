@@ -5,32 +5,32 @@
 
 #include "color.h"
 
-/*Клас для роботи з системою HSB, наслідник класу Color*/
+/*РљР»Р°СЃ РґР»СЏ СЂРѕР±РѕС‚Рё Р· СЃРёСЃС‚РµРјРѕСЋ HSB, РЅР°СЃР»С–РґРЅРёРє РєР»Р°СЃСѓ Color*/
 class ColorHSB: public Color
 {
-    unsigned short hue;  //Значення параметру hue
-    float saturation;    //Значення параметру saturation
-    float brightness;    //Значення параметру brightness
+    unsigned short hue;  //Р—РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ hue
+    float saturation;    //Р—РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ saturation
+    float brightness;    //Р—РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ brightness
 public:
-    ColorHSB(unsigned short h, float s, float b);   //Конструктор класу ColorHSB
-    unsigned short Hue() const;      //Отримання значення параметру hue
-    void setHue(unsigned short h);   //Встановлення значення параметру hue
-    float Saturation() const;        //Отримання значення параметру saturation
-    void setSaturation(float s);     //Встановлення значення параметру saturation
-    float Brightness() const;        //Отримання значення параметру brightness
-    void setBrightness(float b);     //Встановлення значення параметру brightness
-    ColorRGBA toRGBA();              //Петерворення кольору з сиситеми HSB в RGBA
-    ColorCMYK toCMYK();              //Петерворення кольору з сиситеми HSB в CMYK
-    ColorHSB toHSB();                //Петерворення кольору з сиситеми HSB в HSB
-    operator int();                  //Перетворення кольору в ціле число
-    operator float();                //Перетворення кольору в дійсне число
-    void printColor();               //Вивід кольору
-    void printColorInt();            //Вивід кольору у вигляді цілого числа
-    void printColorFloat();          //Вивід кольору у вигляді дійсного числа
-    friend ColorHSB operator+(ColorHSB& clr1, ColorHSB& clr2);   //Перевизначення оператора побітового додавання кольорів в системі HSB
-    friend ColorHSB operator&(ColorHSB& clr1, ColorHSB& clr2);   //Перевизначення оператора побітового перетину кольорів в системі HSB
-    friend ColorHSB operator|(ColorHSB& clr1, ColorHSB& clr2);   //Перевизначення оператора побітового об'єднання кольорів в системі HSB
-    friend ColorHSB operator^(ColorHSB& clr1, ColorHSB& clr2);   //Перевизначення оператора побітового XOR кольорів в системі HSB
+    ColorHSB(unsigned short h, float s, float b);   //РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСѓ ColorHSB
+    unsigned short Hue() const;      //РћС‚СЂРёРјР°РЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ hue
+    void setHue(unsigned short h);   //Р’СЃС‚Р°РЅРѕРІР»РµРЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ hue
+    float Saturation() const;        //РћС‚СЂРёРјР°РЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ saturation
+    void setSaturation(float s);     //Р’СЃС‚Р°РЅРѕРІР»РµРЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ saturation
+    float Brightness() const;        //РћС‚СЂРёРјР°РЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ brightness
+    void setBrightness(float b);     //Р’СЃС‚Р°РЅРѕРІР»РµРЅРЅСЏ Р·РЅР°С‡РµРЅРЅСЏ РїР°СЂР°РјРµС‚СЂСѓ brightness
+    ColorRGBA toRGBA();              //РџРµС‚РµСЂРІРѕСЂРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ Р· СЃРёСЃРёС‚РµРјРё HSB РІ RGBA
+    ColorCMYK toCMYK();              //РџРµС‚РµСЂРІРѕСЂРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ Р· СЃРёСЃРёС‚РµРјРё HSB РІ CMYK
+    ColorHSB toHSB();                //РџРµС‚РµСЂРІРѕСЂРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ Р· СЃРёСЃРёС‚РµРјРё HSB РІ HSB
+    operator int();                  //РџРµСЂРµС‚РІРѕСЂРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ РІ С†С–Р»Рµ С‡РёСЃР»Рѕ
+    operator float();                //РџРµСЂРµС‚РІРѕСЂРµРЅРЅСЏ РєРѕР»СЊРѕСЂСѓ РІ РґС–Р№СЃРЅРµ С‡РёСЃР»Рѕ
+    void printColor();               //Р’РёРІС–Рґ РєРѕР»СЊРѕСЂСѓ
+    void printColorInt();            //Р’РёРІС–Рґ РєРѕР»СЊРѕСЂСѓ Сѓ РІРёРіР»СЏРґС– С†С–Р»РѕРіРѕ С‡РёСЃР»Р°
+    void printColorFloat();          //Р’РёРІС–Рґ РєРѕР»СЊРѕСЂСѓ Сѓ РІРёРіР»СЏРґС– РґС–Р№СЃРЅРѕРіРѕ С‡РёСЃР»Р°
+    friend ColorHSB operator+(ColorHSB& clr1, ColorHSB& clr2);   //РџРµСЂРµРІРёР·РЅР°С‡РµРЅРЅСЏ РѕРїРµСЂР°С‚РѕСЂР° РїРѕР±С–С‚РѕРІРѕРіРѕ РґРѕРґР°РІР°РЅРЅСЏ РєРѕР»СЊРѕСЂС–РІ РІ СЃРёСЃС‚РµРјС– HSB
+    friend ColorHSB operator&(ColorHSB& clr1, ColorHSB& clr2);   //РџРµСЂРµРІРёР·РЅР°С‡РµРЅРЅСЏ РѕРїРµСЂР°С‚РѕСЂР° РїРѕР±С–С‚РѕРІРѕРіРѕ РїРµСЂРµС‚РёРЅСѓ РєРѕР»СЊРѕСЂС–РІ РІ СЃРёСЃС‚РµРјС– HSB
+    friend ColorHSB operator|(ColorHSB& clr1, ColorHSB& clr2);   //РџРµСЂРµРІРёР·РЅР°С‡РµРЅРЅСЏ РѕРїРµСЂР°С‚РѕСЂР° РїРѕР±С–С‚РѕРІРѕРіРѕ РѕР±'С”РґРЅР°РЅРЅСЏ РєРѕР»СЊРѕСЂС–РІ РІ СЃРёСЃС‚РµРјС– HSB
+    friend ColorHSB operator^(ColorHSB& clr1, ColorHSB& clr2);   //РџРµСЂРµРІРёР·РЅР°С‡РµРЅРЅСЏ РѕРїРµСЂР°С‚РѕСЂР° РїРѕР±С–С‚РѕРІРѕРіРѕ XOR РєРѕР»СЊРѕСЂС–РІ РІ СЃРёСЃС‚РµРјС– HSB
 };
 
 #endif // COLORHSB_H_INCLUDED
