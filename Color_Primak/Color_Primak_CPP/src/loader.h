@@ -8,14 +8,14 @@
 
 using namespace std;
 
-/*Клас для отримання матриці з файлу*/
+/*РљР»Р°СЃ РґР»СЏ РѕС‚СЂРёРјР°РЅРЅСЏ РјР°С‚СЂРёС†С– Р· С„Р°Р№Р»Сѓ*/
 class ImageLoader
 {
-    ifstream in;   //Файл для читання матриці
+    ifstream in;   //Р¤Р°Р№Р» РґР»СЏ С‡РёС‚Р°РЅРЅСЏ РјР°С‚СЂРёС†С–
 public:
-    ImageLoader(const string& filename);   //Конструктор класу ImageLoader
-    ~ImageLoader();                        //Деструктор класу ImageLoader
-    Image load();                          //Зчитування матриці з файлу
+    ImageLoader(const string& filename);   //РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСѓ ImageLoader
+    ~ImageLoader();                        //Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСѓ ImageLoader
+    Image load();                          //Р—С‡РёС‚СѓРІР°РЅРЅСЏ РјР°С‚СЂРёС†С– Р· С„Р°Р№Р»Сѓ
 };
 
 #endif // LOADER_H_INCLUDED
