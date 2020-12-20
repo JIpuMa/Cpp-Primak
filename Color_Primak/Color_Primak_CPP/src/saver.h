@@ -8,14 +8,14 @@
 
 using namespace std;
 
-/*Клас для збереження матриці в файл*/
+/*РљР»Р°СЃ РґР»СЏ Р·Р±РµСЂРµР¶РµРЅРЅСЏ РјР°С‚СЂРёС†С– РІ С„Р°Р№Р»*/
 class ImageSaver
 {
-    ofstream out;  //Файл для запису матриці
+    ofstream out;  //Р¤Р°Р№Р» РґР»СЏ Р·Р°РїРёСЃСѓ РјР°С‚СЂРёС†С–
 public:
-    ImageSaver(const string& filename);  //Конструктор класу ImageSaver
-    ~ImageSaver();                       //Деструктор класу ImageSaver
-    void save(const Image& image);       //Запис матриці в файл
+    ImageSaver(const string& filename);  //РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСѓ ImageSaver
+    ~ImageSaver();                       //Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСѓ ImageSaver
+    void save(const Image& image);       //Р—Р°РїРёСЃ РјР°С‚СЂРёС†С– РІ С„Р°Р№Р»
 };
 
 #endif // SAVER_H_INCLUDED
